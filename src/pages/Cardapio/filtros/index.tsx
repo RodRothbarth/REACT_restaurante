@@ -1,11 +1,12 @@
 import filtros from './filtros.json';
 import styles from './Filtros.module.scss';
 import classNames from 'classnames';
+import { Dispatch, SetStateAction } from 'react';
 
 type IFiltro = typeof filtros[0];
 interface IProps {
 	filtro: number | null;
-	setFiltro: React.Dispatch<React.SetStateAction<number | null>>;
+	setFiltro: Dispatch<SetStateAction<number | null>>;
 }
 
 export default function Filtros({ filtro, setFiltro }: IProps) {
@@ -16,7 +17,7 @@ export default function Filtros({ filtro, setFiltro }: IProps) {
 
 	return (
 		<div className={styles.filtros}>
-			{filtros.map((item: any) => {
+			{filtros.map((item: IFiltro) => {
 				return (
 					<button
 						className={classNames({

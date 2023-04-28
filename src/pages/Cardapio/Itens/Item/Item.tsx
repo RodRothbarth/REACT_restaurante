@@ -1,5 +1,5 @@
 import styles from './item.module.scss';
-import itens from '../itens.json';
+import itens from '../../../../Data/cardapio.json';
 import classNames from 'classnames';
 
 type IItem = typeof itens[0];

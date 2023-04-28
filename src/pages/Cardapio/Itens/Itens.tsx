@@ -1,4 +1,4 @@
-import cardapio from './itens.json';
+import cardapio from '../../../Data/cardapio.json';
 import styles from './Itens.module.scss';
 import Item from './Item/Item';
 import { useEffect, useState } from 'react';
@@ -25,14 +25,14 @@ export default function Itens({ busca, filtro, ordem }: Props) {
 
 	function ordenar(newList: ICardapio[]) {
 		switch (ordem) {
-			case 'porcao':
-				return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
-			case 'qdt_pessoas':
-				return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1));
-			case 'preco':
-				return newList.sort((a, b) => (a.price > b.price ? 1 : -1));
-			default:
-				return newList;
+		case 'porcao':
+			return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
+		case 'qdt_pessoas':
+			return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1));
+		case 'preco':
+			return newList.sort((a, b) => (a.price > b.price ? 1 : -1));
+		default:
+			return newList;
 		}
 	}
 

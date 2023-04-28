@@ -1,9 +1,8 @@
-@import 'styles/variables';
-@import 'styles/breakpoints';
+@import "./variables";
+@import "./breakpoints";
 
-.cardapio {
-  &__filtros {
-    align-items: center;  padding: 50px $padding-horizontal;
+.container {
+  padding: 50px $padding-horizontal;
   @media (max-width: $desktop_xsm) {
     padding: 50px $padding-horizontal-mobile;
   }
@@ -13,10 +12,9 @@
   @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
     padding: 50px $padding-horizontal-md;
   }
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    magin-bottom: 30px;
-    width: 100%;
-  }
+}
+.titulo {
+  color: $dark;
+  font-size: 3rem;
+  margin-bottom: 30px;
 }
