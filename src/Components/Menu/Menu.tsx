@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Menu() {
 	const rotas = [
-		{ label: 'Menu', to: '/' },
+		{ label: 'Home', to: '/' },
 		{ label: 'Cardápio', to: '/cardapio' },
 		{ label: 'Sobre', to: '/sobre' },
 	];

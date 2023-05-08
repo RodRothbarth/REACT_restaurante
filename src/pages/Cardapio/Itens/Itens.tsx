@@ -2,8 +2,8 @@ import cardapio from '../../../Data/cardapio.json';
 import styles from './Itens.module.scss';
 import Item from './Item/Item';
 import { useEffect, useState } from 'react';
+import { Cardapio, Prato } from '../../../interfaces/prato.interface';
 
-type ICardapio = typeof cardapio[0];
 interface Props {
 	busca: string;
 	filtro: number | null;
@@ -23,7 +23,7 @@ export default function Itens({ busca, filtro, ordem }: Props) {
 		return true;
 	}
 
-	function ordenar(newList: ICardapio[]) {
+	function ordenar(newList: Cardapio) {
 		switch (ordem) {
 		case 'porcao':
 			return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
@@ -43,7 +43,7 @@ export default function Itens({ busca, filtro, ordem }: Props) {
 
 	return (
 		<div className={styles.itens}>
-			{lista.map((item: ICardapio) => (
+			{lista.map((item: Prato) => (
 				<Item {...item} key={item.id} />
 			))}
 		</div>
