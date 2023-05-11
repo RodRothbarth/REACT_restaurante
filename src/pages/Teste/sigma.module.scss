@@ -1,0 +1,23 @@
+.form{
+  display: grid;
+  grid-template-columns: 8% 8% 8% 8% 8% 8% ;
+  justify-items: center;
+  &__input{
+    width: 80%;
+    margin: 10px;
+    border: solid 1px black;
+    border-radius: 4px;
+  }
+  &__button{
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: bold;
+    height: 40px;
+    justify-content: center;
+    width: fit-content;
+    border: solid 1px black;
+  }
+}
+
